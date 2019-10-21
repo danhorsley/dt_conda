@@ -43,3 +43,35 @@ import random
 ''.join([random.SystemRandom().choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)]) # All one line!
 
 
+** make your environment.yml
+conda env export > environment.yml
+
+** admin functions
+
+run python manage.py runserver
+if you go on http://127.0.0.1:8000/admin/ you will see login page
+make a super user with 
+python manage.py createsuperuser
+
+runserver to check it
+and it will take you to administration page
+
+now you to your app file
+in teh admin.py do this
+
+from .models import Note  (or whatever your class was called)
+admin.site.register(Note)
+
+for extra ntoes etc.
+admin.site.register(PersonalNote) 
+
+now looking at SQL
+python manage.py dbshell
+.tables will display a list of tables
+
+pragma table_info(notes_note); 			displays cols for specified table
+
+SELECT * FROM notes_note;  		to show tabe ontents all - don't forget semi colon
+
+
+
