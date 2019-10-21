@@ -1,0 +1,23 @@
+name: django_env
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - ca-certificates=2019.9.11=hecc5488_0
+  - certifi=2019.6.16=py37_1
+  - django=2.2.5=py37_1
+  - openssl=1.1.1c=hfa6e2cd_0
+  - pip=19.2.3=py37_0
+  - python=3.7.4=h5263a28_0
+  - python-decouple=3.1=py_0
+  - pytz=2019.3=py_0
+  - setuptools=41.4.0=py37_0
+  - sqlite=3.29.0=he774522_0
+  - sqlparse=0.3.0=py_0
+  - vc=14.1=h21ff451_3
+  - vs2015_runtime=15.5.2=3
+  - wheel=0.33.6=py37_0
+  - wincertstore=0.2=py37_0
+prefix: C:\Users\danie\Anaconda3\envs\django_env
+
