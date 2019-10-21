@@ -73,5 +73,9 @@ pragma table_info(notes_note); 			displays cols for specified table
 
 SELECT * FROM notes_note;  		to show tabe ontents all - don't forget semi colon
 
+https://github.com/LambdaSchool/Intro-Django/blob/master/guides/day3.md
+https://github.com/LambdaSchool/Intro-Django/blob/master/guides/day4.md
+
+
 
 
