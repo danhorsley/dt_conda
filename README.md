@@ -43,8 +43,9 @@ import random
 ''.join([random.SystemRandom().choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)]) # All one line!
 
 
-** make your environment.yml
+** make your environment.yml and your pip freeze if you need it
 conda env export > environment.yml
+pip freeze > requirements.txt  (this only works if pip is installed inside your conda env)
 
 ** admin functions
 
