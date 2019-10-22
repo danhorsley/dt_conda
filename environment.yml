@@ -19,5 +19,15 @@ dependencies:
   - vs2015_runtime=15.5.2=3
   - wheel=0.33.6=py37_0
   - wincertstore=0.2=py37_0
-prefix: C:\Users\danie\Anaconda3\envs\django_env
+  - pip:
+    - aniso8601==7.0.0
+    - graphene==2.1.8
+    - graphene-django==2.6.0
+    - graphql-core==2.2.1
+    - graphql-relay==2.0.0
+    - promise==2.2.1
+    - rx==1.6.1
+    - singledispatch==3.4.0.3
+    - six==1.12.0
+prefix: C:\Users\DH\AppData\Local\Continuum\anaconda3\envs\django_env
 
