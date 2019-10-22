@@ -258,22 +258,31 @@ def pop_db(x_dims = 10, y_dims = 8, floors = 8, stairwell = [5,5]):
     my_plot_list = my_world.make_path()
     my_world.join_floors(stairwell)
     my_world.populate_descriptions()
+    
+
 
     for floor in my_world.grid:
         for row in floor:
             for r in row:
+                temp_dict = {'n_to':0,'s_to':0,'e_to':0,'w_to':0,'u_to':0,'d_to':0}
+                for d in temp_dict.keys():
+                    if getattr(r, d) is None:
+                        temp_dict[d] = None
+                    else:
+                        temp_dict[d] = getattr(r, d).coords
+            
                 r = Room_DB(id = r.id,
                             coords = r.coords,
                             description = r.description,
                             x = r.x,
                             y = r.y,
                             floor = r.floor,
-                            n_to = r.n_to,
-                            s_to = r.s_to,
-                            e_to = r.e_to,
-                            w_to = r.w_to,
-                            u_to = r.u_to,
-                            d_to = r.d_to,
+                            n_to = temp_dict['n_to'],
+                            s_to = temp_dict['s_to'],
+                            e_to = temp_dict['e_to'],
+                            w_to = temp_dict['w_to'],
+                            u_to = temp_dict['u_to'],
+                            d_to = temp_dict['d_to'],
                             region = r.region,
                             title = r.title)
                 r.save()
